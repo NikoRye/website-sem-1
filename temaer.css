@@ -1,0 +1,162 @@
+/********************** temaer - portfolio - projekter ********************************/
+
+.projects-section {
+  padding: 120px 10%;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+/* KORT */
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+/* BILLEDER */
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card h3 {
+  color: var(--dusty-green);
+  font-size: 2rem;
+}
+.project-card p {
+  color: var(--beige);
+  font-size: 1rem;
+}
+/* overlay */
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 1;
+  background: rgba(62, 44, 35, 0.816);
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+/***************** tema siderne **********************/
+/* DEN GRØNNE BAGGRUND */
+.section-proces {
+  background-color: var(--dusty-green);
+  width: 100%;
+  padding: 120px 10%; /* Flyttet herop, så baggrunden strækker sig helt ud */
+}
+
+.section-proces p {
+  color: var(--beige); 
+  text-align: center;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+
+.tema-side img {
+  width: 100%;
+  height: auto;          
+  display: block;           
+  margin: 2rem;   
+  border-radius: 12px;  
+}
+
+/* færdige site med knap til site */
+.resultat {
+  margin-top: 6rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.resultat-btn {
+    display: inline-block;
+  text-decoration: none;
+  background: var(--brown);
+  color: var(--beige);
+  padding: 15px 30px;
+  border-radius: 50px; /* bløde kanter */
+  transition: 0.3s;
+  margin-top: 2rem;
+}
+.resultat-btn:hover {
+  background: var(--dusty-green);
+}
+
+.galleri {
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/*  desktop */
+
+@media (min-width: 800px) {
+      .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* OVERLAY */
+
+  .project-overlay {
+    opacity: 0;
+    transition: 0.4s ease;
+  }
+  /* top billede og tekst med process */
+  .proces-grid {
+   display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 0;
+  }
+
+  .proces-grid img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .proces-grid p {
+    margin-top: 1rem;
+  }
+
+  /* billeder i grid 3 billeder i 2 kolloner */
+  .intro-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 4rem;
+  }
+
+  .intro-content img {
+    width: 100%;
+  }
+
+  /* galleri */
+  .galleri {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+  }
+
+  .galleri img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}

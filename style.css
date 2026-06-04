@@ -1,0 +1,330 @@
+/* Mobil */
+@media (max-width: 800px) {
+  h1 {
+    font-family: "Londrina Outline", sans-serif;
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    color: var(--dark-brown);
+  }
+  h2 {
+    font-family: "Londrina Outline", sans-serif;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 0.7rem;
+    font-family: "Open Sans", sans-serif;
+  }
+}
+/* SVG BAGGRUND */
+.bg-svg {
+  position: absolute;
+  top: 1200px; /* ryk den ned */
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.bg-svg text {
+  font-size: 18px;
+  fill: var(--brown);
+  letter-spacing: 1px;
+}
+
+
+.bg-svg1 {
+  position: fixed;
+  width: 170%; /* ryk vandret */
+  height: 30%; /* størrelse */
+  opacity: 0.5;
+  rotate: 210deg;
+  top: 120px; /* ryk ned */
+  pointer-events: none;
+}
+
+.bg-svg2 {
+  position: fixed;
+  width: 150%; /* ryk vandret */
+  height: 25%; /* størrelse */
+  opacity: 0.5;
+  rotate: 60deg;
+  top: 130px; /* ryk ned */
+  pointer-events: none;
+}
+
+.bg-svg3 {
+  position: fixed;
+  width: 190%; /* ryk vandret */
+  height: 15%; /* størrelse */
+  opacity: 0.5;
+  rotate: 60deg;
+  top: 210px; /* ryk ned */
+  pointer-events: none;
+}
+
+/* HERO */
+.hero {
+  background-image: url(img/bagrund-forside.webp);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  min-height: 60vh;
+}
+
+.hero-btn {
+  text-decoration: none;
+  background: var(--brown);
+  color: var(--beige);
+  padding: 15px 30px;
+  border-radius: 50px;
+  transition: 0.3s;
+  /* knappen rykkes specifikt */
+  position: relative;
+  left: 300px;
+  top: 270px;
+}
+
+.hero-btn:hover {
+  background: var(--dusty-green);
+}
+
+/* SECTIONS */
+section {
+  padding: 120px 10%;
+}
+
+/* info section */
+.info-section {
+  position: relative;
+}
+
+.info-title {
+  position: relative;
+}
+
+/* info box med kompentancer på forsdien */
+.info-box {
+  background: var(--cream);
+  color: var(--beige);
+  padding: 35px; /* størrelsen på boxen */
+  border-radius: 70% 40% 55% 45% / 55% 60% 40% 45%; /* organisk form */
+  position: relative;
+}
+.info-box h3 {
+  font-size: 2rem;
+  color: var(--beige);
+}
+.info-box ul {
+  text-align: center;
+  list-style: none;
+}
+
+/* info box knap */
+.info-btn {
+  display: inline-block; 
+  margin-top: 30px;
+  text-decoration: none;
+  background: var(--brown);
+  color: var(--beige);
+  padding: 15px 30px;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+/* tema projekter på forsiden */
+.cards {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 320px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: var(--beige);
+  border: var(--cream) solid;
+  box-shadow: 2px 2px 20px var(--cream);
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: flex;
+}
+
+.card-content {
+  padding: 30px;
+}
+
+.card h3 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: var(--dusty-green);
+  font-family: "Londrina Outline", sans-serif;
+}
+
+.card p {
+  line-height: 1.7;
+  margin-bottom: 25px;
+  color: black;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.buttons a,
+.buttons button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  background: var(--brown);
+  color: var(--beige);
+  transition: 0.3s;
+}
+
+.buttons a:hover,
+.buttons button:hover {
+  background: var(--dusty-green);
+}
+
+/* POPUP BAGGRUND */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #3e2c2396;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* SELVE BOXEN */
+
+.popup-content {
+  background: var(--beige);
+  padding: 2rem;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 500px;
+  min-height: 500px;
+}
+
+/* KNAP */
+.popup-btn {
+  display: block;      
+  margin: 1.5rem; 
+  padding: 12px;       
+  border-radius: 10px;   
+  background: var(--brown);
+  color: var(--beige);      /* tekstfarven, så den kan læses */
+  text-decoration: none;
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.popup-btn:hover {
+  background: var(--dusty-green);
+}
+
+
+/**************** DESKTOP ****************************/
+
+@media (min-width: 800px) {
+  /* SVG BAGGRUND */
+.bg-svg {
+  position: absolute;
+  top: 1500px; /* ryk den ned */
+  opacity: 0.5;
+  pointer-events: none;
+}
+.bg-svg text {
+  font-size: 18px;
+  fill: var(--brown);
+  letter-spacing: 1px;
+}
+
+  /* hero */
+  .hero {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+
+    /* bagrund på forsiden */
+    background-image: url("../img/image.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .hero-btn {
+  text-decoration: none;
+  background: var(--brown);
+  color: var(--beige);
+  padding: 15px 30px;
+  border-radius: 50px;
+  transition: 0.3s;
+  /* knappen rykkes specifikt */
+  position: relative;
+  left: 130px;
+  top: 160px;
+}
+
+  /* info section */
+  .info-section {
+    position: relative;
+    min-height: 800px;
+  }
+
+  .info-title {
+    position: absolute;
+    top: 200px;
+    left: 150px;
+  }
+
+  /* info box med kompentancer på forsdien */
+  .info-box {
+    background: var(--cream);
+    color: var(--beige);
+    padding: 45px; /* størrelsen på boxen */
+    border-radius: 60% 40% 55% 45% / 55% 60% 40% 45%; /* organisk form */
+    display: inline-block;
+    position: absolute;
+    left: 1000px;
+    top: 250px;
+  }
+
+  /* info box knap */
+  .info-btn {
+    text-decoration: none;
+    background: var(--brown);
+    color: var(--beige);
+    padding: 15px 30px;
+    border-radius: 50px;
+    transition: 0.3s;
+    /* knappen rykkes */
+    position: absolute;
+    top: 450px;
+    left: 200px;
+  }
+  .info-btn:hover {
+    background: var(--dusty-green);
+  }
+}

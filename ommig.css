@@ -1,0 +1,152 @@
+/* portrait */
+.portrait {
+  width: 80%;
+  border-radius: 20px; /* afrunder hjørner */
+  object-fit: cover;
+  border: 3px solid var(--cream);
+}
+
+/* about me */
+
+.about-intro h2 {
+    font-size: 2rem;
+    text-align: left;
+}
+
+/* erfarings kort */
+.experience-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(62, 44, 35, 0.6);
+  color: white;
+
+  display: grid;
+  place-content: center;
+  text-align: center;
+
+  padding: 20px;
+
+  opacity: 1;
+  transition: none;
+}
+
+/* SKILLS */
+
+.skills-section {
+  margin-bottom: 10px;
+}
+
+.skills-grid {
+  display: grid;
+  gap: 40px;
+}
+
+.skill-card {
+  background: var(--dusty-green);
+  padding: 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 3px solid var(--cream);
+}
+
+/* BARS */
+.skill-bar {
+  width: 100%;
+  height: 18px;
+  background: var(--beige);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.skill-level {
+  height: 100%;
+  background: var(--cream);
+  border-radius: 20px;
+}
+.skill-card h3 {
+  color: var(--dark-brown);
+}
+/* PROCENTER */
+
+.html {
+  width: 70%;
+}
+
+.css {
+  width: 45%;
+}
+
+.figma {
+  width: 65%;
+}
+
+.adobe {
+  width: 40%;
+}
+
+/*  OM MIG desktop  */
+@media (min-width: 800px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .experience-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .about-hero {
+    display: grid;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 50px;
+    grid-template-columns: 1fr 1fr;
+  }
+} /* End of media query */
+
+/* ERFARINGER */
+.experience-grid {
+  display: grid;
+  gap: 30px;
+}
+
+.experience-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.experience-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+}
+.experience-card p {
+  color: var(--beige);
+}
+/* OVERLAY */
+.experience-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(62, 44, 35, 0.75);
+  color: white;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  padding: 30px;
+  opacity: 1;
+  transition: none;
+}
+.experience-card:hover .experience-overlay {
+  opacity: 1;
+}
+
+@media (min-width: 800px) {
+  .experience-overlay {
+    opacity: 0;
+    transition: 0.4s ease;
+  }
+  .experience-card:hover .experience-overlay {
+    opacity: 1;
+  }
+}
