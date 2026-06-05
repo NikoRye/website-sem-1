@@ -347,7 +347,7 @@ section {
     padding: 50px 20px;
 
     /* bagrund på forsiden */
-    background-image: url("../img/image.webp");
+    background-image: url("img/image.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
