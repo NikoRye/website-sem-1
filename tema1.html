@@ -143,11 +143,11 @@
                 <li><a href="index.html">Forside</a></li>
 
                 <li class="dropdown">
-                    <a href="projekter.html">Portfolio</a>
+                    <a href="projekter.html" class="active">Portfolio</a>
 
                     <ul class="dropdown-menu">
                         <!-- Temaer -->
-                        <li class="desktop-only"><a href="tema1.html">Tema 1</a></li>
+                        <li class="desktop-only"><a href="tema1.html" class="active">Tema 1</a></li>
                         <li class="desktop-only"><a href="tema2.html">Tema 2</a></li>
                         <li class="desktop-only"><a href="tema3.html">Tema 3</a></li>
                         <li class="desktop-only"><a href="tema4.html">Tema 4</a></li>
@@ -190,34 +190,36 @@
             </section>
 
 
-            <section class="proces-grid">
+        <section class="section-proces">
+        
+            <div class="proces-grid">
 
-                <article>
+                <article class="tema-card">
                     <img src="img/tema 1 - 2.webp" alt="">
                     <p>Research og idéudvikling</p>
                 </article>
 
-                <article>
+                <article class="tema-card">
                     <img src="img/tema 1 - 3.webp" alt="">
                     <p>Wireframes</p>
                 </article>
 
-                <article>
+                <article class="tema-card">
                     <img src="img/tema 1 - 4.webp" alt="">
                     <p>Mockups</p>
                 </article>
 
-                <article>
+                <article class="tema-card">
                     <img src="img/tema 1 - 5.webp" alt="">
                     <p>Kodning af layout</p>
                 </article>
 
-                <article>
+                <article class="tema-card">
                     <img src="img/tema 1 - 6.webp" alt="">
                     <p>Test af design</p>
                 </article>
 
-                <article>
+                <article class="tema-card">
                     <img src="img/tema 1 - 7.webp" alt="">
                     <p>Endeligt resultat</p>
                 </article>
@@ -234,55 +236,61 @@
             </section>
 
 
-            <section class="galleri">
-
-                <img src="img/tema 1 - 8.webp" alt="">
-                <img src="img/tema 1 - 9.webp" alt="">
-                <img src="img/tema 1 -10.webp" alt="">
-
+            <section class="section-galleri">
+                <h2>Galleri</h2>
+                <div class="galleri">
+                    <img src="img/tema 1 - 8.webp" alt="">
+                    <img src="img/tema 1 - 9.webp" alt="">
+                    <img src="img/tema 1 -10.webp" alt="">
+                </div>
             </section>
         </div>
+        <section class="next-tema">
+            <a href="tema2.html" class="next-btn">
+                Tema 2 →
+            </a>
+        </section>
     </main>
-<footer class="footer">
-    <div class="footer-content">
+    <footer class="footer">
+        <div class="footer-content">
 
-        <div class="footer-section">
-            <h3>Om mig</h3>
-            <p>
-                Studerende inden for webudvikling med interesse for
-                UX/UI-design, HTML, CSS og moderne webdesign.
-            </p>
+            <div class="footer-section">
+                <h3>Om mig</h3>
+                <p>
+                    Studerende inden for webudvikling med interesse for
+                    UX/UI-design, HTML, CSS og moderne webdesign.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <p>Email:
+                    <a href="mailto:Nikoline.rye@gmail.com">
+                        Nikoline.rye@gmail.com
+                    </a>
+                </p>
+                <p>
+                    Telefon:
+                    <a href="tel:+45 42 70 14 41">
+                        +45 42 70 14 41
+                    </a>
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="om-mig.html">Om mig</a></li>
+                    <li><a href="projekter.html">Projekter</a></li>
+                </ul>
+            </div>
+
         </div>
 
-        <div class="footer-section">
-            <h3>Kontakt</h3>
-            <p>Email:
-                <a href="mailto:Nikoline.rye@gmail.com">
-                    Nikoline.rye@gmail.com
-                </a>
-            </p>
-            <p>
-                Telefon:
-                <a href="tel:+45 42 70 14 41">
-                    +45 42 70 14 41
-                </a>
-            </p>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nikoline Rye Bønnelykke | Portfolio</p>
         </div>
-
-        <div class="footer-section">
-            <h3>Links</h3>
-            <ul>
-                <li><a href="om-mig.html">Om mig</a></li>
-                <li><a href="projekter.html">Projekter</a></li>
-            </ul>
-        </div>
-
-    </div>
-
-    <div class="footer-bottom">
-        <p>&copy; 2026 Nikoline Rye Bønnelykke | Portfolio</p>
-    </div>
-</footer>
+    </footer>
     <script src="script.js"></script>
 
 </body>

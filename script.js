@@ -17,6 +17,20 @@ window.onclick = function (event) {
   });
 };
 
+/* læs mere på tema siderne */
+document.querySelectorAll(".read-more-btn").forEach(button => {
+    button.addEventListener("click", () => {
+        const article = button.closest("article");
+        article.classList.toggle("open");
+
+        if (article.classList.contains("open")) {
+            button.textContent = "Læs mindre";
+        } else {
+            button.textContent = "Læs mere";
+        }
+    });
+});
+
 /* burger */
 const burger = document.querySelector(".burger");
 const nav = document.querySelector(".nav");
