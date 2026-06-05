@@ -21,9 +21,9 @@
 /* SVG BAGGRUND */
 .bg-svg {
   position: absolute;
-  top: 1200px; /* ryk den ned */
-  opacity: 0.5;
+  opacity: 0.2;
   pointer-events: none;
+  z-index: 0;
 }
 
 .bg-svg text {
@@ -32,15 +32,15 @@
   letter-spacing: 1px;
 }
 
-
 .bg-svg1 {
   position: fixed;
   width: 170%; /* ryk vandret */
-  height: 30%; /* størrelse */
+  height: 25%; /* størrelse */
   opacity: 0.5;
   rotate: 210deg;
-  top: 120px; /* ryk ned */
+  top: 155px; /* ryk ned */
   pointer-events: none;
+  z-index: -1;
 }
 
 .bg-svg2 {
@@ -81,8 +81,8 @@
   transition: 0.3s;
   /* knappen rykkes specifikt */
   position: relative;
-  left: 300px;
-  top: 270px;
+  left: 260px;
+  top: 250px;
 }
 
 .hero-btn:hover {
@@ -96,38 +96,117 @@ section {
 
 /* info section */
 .info-section {
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  min-height: 90vh;
+  align-items: center;
+  padding: 120px 10%;
+  text-align: left;
+  margin-bottom: 80px;
 }
-
+.info-section > div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .info-title {
-  position: relative;
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--brown);
+  margin-bottom: 20px;
+  text-align: left;
 }
 
-/* info box med kompentancer på forsdien */
-.info-box {
-  background: var(--cream);
-  color: var(--beige);
-  padding: 35px; /* størrelsen på boxen */
-  border-radius: 70% 40% 55% 45% / 55% 60% 40% 45%; /* organisk form */
+.info-text {
+  max-width: 400px;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #3e2c23;
+  text-align: left;
+}
+.info-right {
+  display: flex;
+  justify-content: center;
+}
+.info-image {
+  width: 380px;
+  height: 500px;
+  background-image: url("img/forside-section.webp");
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px;
+  filter: saturate(0.9) contrast(1.05);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
   position: relative;
-}
-.info-box h3 {
-  font-size: 2rem;
-  color: var(--beige);
-}
-.info-box ul {
-  text-align: center;
-  list-style: none;
+  border: var(--cream) solid;
 }
 
 /* info box knap */
 .info-btn {
-  display: inline-block; 
-  margin-top: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
   text-decoration: none;
   background: var(--brown);
   color: var(--beige);
   padding: 15px 30px;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+.info-btn:hover {
+  background: var(--dusty-green);
+}
+
+/* billede og links til some */
+
+.image-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("img/insta.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  min-height: 20rem;
+  margin-top: 15rem;
+}
+
+.image-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  filter: blur(5px);
+  transform: scale(1.1);
+  z-index: 0;
+}
+
+.image-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.social-overlay {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column; /* MOBILE FIRST */
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.social-overlay a {
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px 10px;
+  border: 1px solid var(--cream);
   border-radius: 50px;
   transition: 0.3s;
 }
@@ -227,12 +306,12 @@ section {
 
 /* KNAP */
 .popup-btn {
-  display: block;      
-  margin: 1.5rem; 
-  padding: 12px;       
-  border-radius: 10px;   
+  display: block;
+  margin: 1.5rem;
+  padding: 12px;
+  border-radius: 10px;
   background: var(--brown);
-  color: var(--beige);      /* tekstfarven, så den kan læses */
+  color: var(--beige); /* tekstfarven, så den kan læses */
   text-decoration: none;
   transition: 0.3s ease;
   text-align: center;
@@ -242,22 +321,21 @@ section {
   background: var(--dusty-green);
 }
 
-
 /**************** DESKTOP ****************************/
 
 @media (min-width: 800px) {
   /* SVG BAGGRUND */
-.bg-svg {
-  position: absolute;
-  top: 1500px; /* ryk den ned */
-  opacity: 0.5;
-  pointer-events: none;
-}
-.bg-svg text {
-  font-size: 18px;
-  fill: var(--brown);
-  letter-spacing: 1px;
-}
+  .bg-svg {
+    position: absolute;
+    top: 1500px; /* ryk den ned */
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .bg-svg text {
+    font-size: 18px;
+    fill: var(--brown);
+    letter-spacing: 1px;
+  }
 
   /* hero */
   .hero {
@@ -275,56 +353,82 @@ section {
     background-repeat: no-repeat;
   }
   .hero-btn {
-  text-decoration: none;
-  background: var(--brown);
-  color: var(--beige);
-  padding: 15px 30px;
-  border-radius: 50px;
-  transition: 0.3s;
-  /* knappen rykkes specifikt */
-  position: relative;
-  left: 130px;
-  top: 160px;
-}
-
-  /* info section */
-  .info-section {
-    position: relative;
-    min-height: 800px;
-  }
-
-  .info-title {
-    position: absolute;
-    top: 200px;
-    left: 150px;
-  }
-
-  /* info box med kompentancer på forsdien */
-  .info-box {
-    background: var(--cream);
-    color: var(--beige);
-    padding: 45px; /* størrelsen på boxen */
-    border-radius: 60% 40% 55% 45% / 55% 60% 40% 45%; /* organisk form */
-    display: inline-block;
-    position: absolute;
-    left: 1000px;
-    top: 250px;
-  }
-
-  /* info box knap */
-  .info-btn {
     text-decoration: none;
     background: var(--brown);
     color: var(--beige);
     padding: 15px 30px;
     border-radius: 50px;
     transition: 0.3s;
-    /* knappen rykkes */
-    position: absolute;
-    top: 450px;
-    left: 200px;
+    /* knappen rykkes specifikt */
+    position: relative;
+    left: 130px;
+    top: 160px;
   }
-  .info-btn:hover {
-    background: var(--dusty-green);
+
+  /* info section */
+  .info-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 90vh;
+    align-items: center;
+    padding: 120px 10%;
+    text-align: left;
+  }
+  .info-title {
+    font-size: 4rem;
+    line-height: 1;
+    color: var(--brown);
+    position: relative;
+    text-align: left;
+  }
+
+  .info-text {
+    max-width: 400px;
+    font-size: 1.1rem;
+    color: var(--dark-brown);
+    position: relative;
+    text-align: left;
+  }
+  .info-right {
+    display: flex;
+    justify-content: center;
+  }
+  .info-image {
+    width: 380px;
+    height: 500px;
+    background-image: url("img/forside-section.webp");
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    filter: saturate(0.9) contrast(1.05);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+    position: relative;
+    border: var(--cream) solid;
+  }
+  /* info box knap */
+
+  /* billede og links til some */
+  .social-overlay a:hover {
+    background: transparent;
+    color: var(--beige);
+  }
+  .image-section {
+    min-height: 450px;
+  }
+
+  .social-overlay {
+    flex-direction: row; /* desktop bliver vandret */
+    gap: 380px;
+  }
+
+  .social-overlay a {
+    font-size: 1.2rem;
+  }
+
+  /* projects */
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }

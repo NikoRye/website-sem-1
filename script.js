@@ -17,25 +17,43 @@ window.onclick = function (event) {
   });
 };
 
-/* læs mere på tema siderne */
-document.querySelectorAll(".read-more-btn").forEach(button => {
-    button.addEventListener("click", () => {
-        const article = button.closest("article");
-        article.classList.toggle("open");
+/* læs mere på tema siderne, fungere på flere knapper */
+document.querySelectorAll(".read-more-btn").forEach((button) => {
+  button.addEventListener("click", () => {
+    const article = button.closest("article");
+    article.classList.toggle("open");
 
-        if (article.classList.contains("open")) {
-            button.textContent = "Læs mindre";
-        } else {
-            button.textContent = "Læs mere";
-        }
-    });
+    if (article.classList.contains("open")) {
+      button.textContent = "Læs mindre";
+    } else {
+      button.textContent = "Læs mere";
+    }
+  });
 });
+
+/* læs mere på om mig siden, fungere på en specifik knap */
+const btn = document.querySelector(".read-more-btn");
+const moreText = document.querySelector(".more-text");
+
+if (btn && moreText) {
+  btn.addEventListener("click", function () {
+    moreText.classList.toggle("show");
+
+    if (moreText.classList.contains("show")) {
+      btn.textContent = "Vis mindre";
+    } else {
+      btn.textContent = "Læs mere";
+    }
+  });
+}
 
 /* burger */
 const burger = document.querySelector(".burger");
 const nav = document.querySelector(".nav");
 
-burger.addEventListener("click", () => {
-  burger.classList.toggle("active");
-  nav.classList.toggle("active");
-});
+if (burger && nav) {
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("active");
+    nav.classList.toggle("active");
+  });
+}

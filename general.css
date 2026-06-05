@@ -64,7 +64,7 @@ p {
 
     border-radius: 50%;
 
-    background: var(--cream);
+    background: var(--brown);
     color: var(--beige);
 
     font-size: 0.8rem;
@@ -78,9 +78,12 @@ p {
     color: var(--beige);
 }
 
+
+
 /* header */
 .header {
   background-color: var(--dusty-green);
+  width: 100%;
 }
 
 /* BODY */

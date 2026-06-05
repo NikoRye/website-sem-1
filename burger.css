@@ -1,13 +1,11 @@
 /* NAVIGATION menu */
 
-
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 25px;
 }
-
 
 nav ul {
   display: flex;
@@ -38,7 +36,6 @@ nav a:hover {
   position: relative;
 }
 
-/* DROPDOWN MENU */
 .dropdown-menu {
   opacity: 0;
   visibility: hidden;
@@ -53,7 +50,6 @@ nav a:hover {
   flex-direction: column; /* GØR DEN LODRET */
 }
 
-/* DROPDOWN LINKS */
 .dropdown-menu li a {
   display: block;
   padding: 0.2rem;
@@ -61,12 +57,10 @@ nav a:hover {
   text-decoration: none;
 }
 
-/* HOVER PÅ DROPDOWN LINKS */
 .dropdown-menu li a:hover {
   background-color: var(--dusty-green);
 }
 
-/* VIS DROPDOWN */
 .dropdown:hover .dropdown-menu {
   opacity: 1;
   visibility: visible;
@@ -88,12 +82,7 @@ header {
   padding: 20px 25px;
 }
 
-
-
-
-
 /************* BURGER (DEFAULT HIDDEN) *****************/
-
 .burger {
   width: 30px;
   height: 20px;
@@ -113,14 +102,11 @@ header {
 }
 
 /*************** MOBILE **********************/
-
 @media (max-width: 800px) {
- /* fjerner temaer i menu i burger */
-    .desktop-only {
+  .desktop-only {
     display: none;
   }
 
-  /* skjul desktop menu */
   .nav-links {
     display: none;
     position: absolute;
@@ -131,14 +117,13 @@ header {
     width: 220px;
     padding: 20px;
     gap: 20px;
+    z-index: 99;
   }
 
-  /* vis burger */
   .burger {
     display: flex;
   }
 
-  /* når menu er aktiv */
   nav.active .nav-links {
     display: flex;
   }
@@ -152,7 +137,6 @@ header {
     color: var(--dark-brown);
   }
 
-  /* BURGER ANIMATION */
   .burger.active .line:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }

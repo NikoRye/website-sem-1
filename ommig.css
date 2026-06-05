@@ -12,6 +12,32 @@
     font-size: 2rem;
     text-align: left;
 }
+/* læs mere */
+.more-text {
+  display: none;
+}
+
+/* 2. Denne klasse vil JavaScript give teksten, når man klikker */
+.more-text.show {
+  display: block;
+}
+
+/* Din knap-styling (behold bare denne) */
+.read-more-btn {
+  text-decoration: none;
+  background: var(--cream);
+  color: var(--beige);
+  padding: 15px 30px;
+  border-radius: 50px;
+  transition: 0.3s;
+  border: 0rem;
+  font-family: sans-serif;
+  margin: 1rem;
+  cursor: pointer; /* Gør at musen bliver til en hånd, når man holder over */
+}
+.read-more-btn:hover {
+  background: #af703c;
+}
 
 /* erfarings kort */
 .experience-overlay {
@@ -35,8 +61,14 @@
 
 .skills-section {
   margin-bottom: 10px;
+  background-color: var(--dusty-green);
+  width: 100%;
+  padding: 120px 10%; 
+  z-index: 1;
 }
-
+.skills-section h2 {
+    color: var(--beige);
+}
 .skills-grid {
   display: grid;
   gap: 40px;
@@ -65,8 +97,9 @@
   border-radius: 20px;
 }
 .skill-card h3 {
-  color: var(--dark-brown);
+  color: var(--beige);
 }
+
 /* PROCENTER */
 
 .html {
@@ -84,6 +117,7 @@
 .adobe {
   width: 40%;
 }
+
 
 /*  OM MIG desktop  */
 @media (min-width: 800px) {
