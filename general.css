@@ -19,7 +19,7 @@ img {
   --dark-brown: #3c271d;
   --brown: #9f6c59;
   --beige: #f9eddd;
-  --cream: #E08E4D;
+  --cream: #fba157;
   --dusty-green: #88a977;
 }
 
@@ -51,34 +51,32 @@ p {
 }
 
 .floating-home {
-    position: fixed;
-    bottom: 3rem;
-    right: 3rem;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
 
-    width: 65px;
-    height: 65px;
+  width: 65px;
+  height: 65px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    border-radius: 50%;
+  border-radius: 50%;
 
-    background: var(--brown);
-    color: var(--beige);
+  background: var(--brown);
+  color: var(--beige);
 
-    font-size: 0.8rem;
-    text-decoration: none;
+  font-size: 0.8rem;
+  text-decoration: none;
 
-    z-index: 1000;
+  z-index: 1000;
 }
 
 .floating-home:hover {
-    background: var(--dusty-green);
-    color: var(--beige);
+  background: var(--dusty-green);
+  color: var(--beige);
 }
-
-
 
 /* header */
 .header {
@@ -96,7 +94,6 @@ body {
   background-color: var(--beige);
   min-height: 100vh;
 }
-
 
 /* logo */
 .logo {
@@ -121,18 +118,30 @@ body {
 .footer-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
+  align-items: start;
 }
 
-.footer-section h3 {
-  margin-bottom: 15px;
+.footer-section {
+  padding: 1.5rem 2rem;
+  text-align: left; /* align h3, p and lists */
+}
+
+/* Skillelinje mellem kolonnerne i footeren.
+   Selektoren bruger den tilstødende søskende-selector (+),
+   som vælger en `.footer-section`, der står direkte efter
+   en anden `.footer-section`. Det betyder, at reglen ikke rammer den første kolonne,
+   men kun den anden og tredje kolonne i footeren.
+*/
+.footer-section + .footer-section {
+  border-left: 1px solid var(--beige); 
 }
 
 .footer-section p,
 .footer-section li {
-  margin-bottom: 12px;
+  margin: 0 0 1.2rem 0;
+  color: var(--dark-brown);
 }
 
 .footer-section ul {
@@ -147,7 +156,6 @@ body {
 
 .footer-section a:hover {
   text-decoration: underline;
-  background: var(--dusty-green);
 }
 
 .footer-bottom {
@@ -156,12 +164,10 @@ body {
   padding-top: 20px;
 }
 
-/* mobil */ 
+/* mobil */
 @media (max-width: 800px) {
   .footer-content {
     grid-template-columns: 1fr;
     text-align: center;
   }
-
-
 }

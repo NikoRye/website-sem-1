@@ -110,25 +110,20 @@ section {
   flex-direction: column;
   justify-content: center;
 }
-.info-title {
-  font-size: 4rem;
-  line-height: 1;
-  color: var(--brown);
-  margin-bottom: 20px;
-  text-align: left;
-}
 
-.info-text {
+.info-section p h1 {
   max-width: 400px;
   font-size: 1.1rem;
   margin-bottom: 30px;
   color: #3e2c23;
-  text-align: left;
+  text-align: center;
 }
+
 .info-right {
   display: flex;
   justify-content: center;
 }
+
 .info-image {
   width: 380px;
   height: 500px;
@@ -196,17 +191,17 @@ section {
   position: relative;
   z-index: 2;
   display: flex;
-  flex-direction: column; /* MOBILE FIRST */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 15px;
 }
 .social-overlay a {
-  color: var(--cream);
+  color: var(--beige);
   text-decoration: none;
   font-size: 1rem;
   padding: 10px 10px;
-  border: 1px solid var(--cream);
+  border: 1px solid var(--beige);
   border-radius: 50px;
   transition: 0.3s;
 }
@@ -224,8 +219,7 @@ section {
   border-radius: 20px;
   overflow: hidden;
   background-color: var(--beige);
-  border: var(--cream) solid;
-  box-shadow: 2px 2px 20px var(--cream);
+  box-shadow: 2px 2px 20px #988e7f;
   transition: 0.4s;
 }
 
@@ -236,8 +230,16 @@ section {
 .img {
   width: 100%;
   height: 180px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  display: flex;
+  display: block;
+  border-radius: 8px;
 }
 
 .card-content {
@@ -389,36 +391,35 @@ section {
     position: relative;
     text-align: left;
   }
-  .info-right {
-    display: flex;
-    justify-content: center;
-  }
-  .info-image {
+
+  .info-right img {
     width: 380px;
     height: 500px;
-    background-image: url("img/forside-section.webp");
-    background-size: cover;
-    background-position: center;
+    object-fit: cover;
     border-radius: 30px;
-    filter: saturate(0.9) contrast(1.05);
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
-    position: relative;
     border: var(--cream) solid;
+    display: block;
   }
   /* info box knap */
+  .info-btn {
+    position: relative;
+    left: 815px;
+    z-index: 1;
+  }
 
   /* billede og links til some */
   .social-overlay a:hover {
     background: transparent;
-    color: var(--beige);
+    color: var(--cream);
   }
   .image-section {
     min-height: 450px;
   }
 
   .social-overlay {
-    flex-direction: row; /* desktop bliver vandret */
-    gap: 380px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
   }
 
   .social-overlay a {
@@ -430,5 +431,7 @@ section {
   .cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin: 5rem;
+    margin-top: 5rem;
   }
 }

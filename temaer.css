@@ -17,15 +17,17 @@
   overflow: hidden;
   border-radius: 20px;
   text-decoration: none;
+
+  height: 200px;
 }
 
 /* BILLEDER */
 
 .project-card img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  height: 100%;
   display: block;
+  object-fit: cover;
 }
 
 .project-card h3 {
@@ -37,14 +39,15 @@
   font-size: 1rem;
 }
 /* overlay */
-.project-overlay {
+ .project-overlay {
   position: absolute;
   inset: 0;
-  opacity: 1;
   background: rgba(62, 44, 35, 0.816);
   display: grid;
   place-content: center;
   text-align: center;
+  opacity: 0;
+  transition: 0.3s ease;
 }
 
 .project-card:hover .project-overlay {
@@ -152,6 +155,53 @@ article.open .more-text {
 .section-galleri h2 {
   font-size: 5rem;
   color: var(--beige);
+}
+/* pop up galleri */
+.popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.popup .popup-content {
+  position: relative;
+  width: 80%;
+  max-width: 900px;
+  max-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 3px solid var(--dusty-green);
+}
+
+.popup .popup-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(249, 237, 221, 0.95);
+  color: var(--dark-brown);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  border: none;
+  font-size: 0.95rem;
 }
 
 /* næste tema knap */
