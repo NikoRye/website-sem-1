@@ -24,6 +24,8 @@
   opacity: 0.2;
   pointer-events: none;
   z-index: 0;
+  margin-top: 10rem;
+  margin-bottom: 15rem;
 }
 
 .bg-svg text {
