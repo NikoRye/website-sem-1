@@ -73,11 +73,6 @@ billeder.forEach(img => {
   });
 });
 
-// Luk popup når man klikker på kryds
-luk.addEventListener("click", () => {
-  popup.style.display = "none";
-});
-
 // Luk popup når man klikker udenfor billedet
 popup.addEventListener("click", (e) => {
   if (e.target === popup) {

@@ -81,8 +81,8 @@
   transition: 0.3s;
   /* knappen rykkes specifikt */
   position: relative;
-  left: 260px;
-  top: 250px;
+  left: 320px;
+  top: 370px;
 }
 
 .hero-btn:hover {
