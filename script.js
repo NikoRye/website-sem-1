@@ -58,24 +58,26 @@ if (burger && nav) {
   });
 }
 
-
 /* popup på tema galleri */
 const billeder = document.querySelectorAll(".galleri img");
 const popup = document.getElementById("popup");
 const popupImg = document.getElementById("popup-img");
 const luk = document.querySelector(".luk");
 
-// Åbn popup når man klikker på et billede
-billeder.forEach(img => {
-  img.addEventListener("click", () => {
-    popup.style.display = "flex";
-    popupImg.src = img.src;
+// Kun tilføj event listeners hvis popup-elementerne findes på siden
+if (popup && popupImg) {
+  // Åbn popup når man klikker på et billede
+  billeder.forEach((img) => {
+    img.addEventListener("click", () => {
+      popup.style.display = "flex";
+      popupImg.src = img.src;
+    });
   });
-});
 
-// Luk popup når man klikker udenfor billedet
-popup.addEventListener("click", (e) => {
-  if (e.target === popup) {
-    popup.style.display = "none";
-  }
-});
+  // Luk popup når man klikker udenfor billedet
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) {
+      popup.style.display = "none";
+    }
+  });
+}
