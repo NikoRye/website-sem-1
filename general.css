@@ -50,7 +50,7 @@ p {
   color: black;
 }
 
-/* scroll - hvor langt du er nået på siden */
+/* scroll - hvor langt du er nået på siden 
 html::before {
   content: "";
   inset: 0;
@@ -66,6 +66,17 @@ html::before {
   from {
     scale: 0 1;
   }
+}
+*/
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background-color: var(--brown);
+  z-index: 9999;
 }
 
 /* knap der viser dig tilbage til forsiden */
