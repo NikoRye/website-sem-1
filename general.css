@@ -154,7 +154,7 @@ body {
    men kun den anden og tredje kolonne i footeren.
 */
 .footer-section + .footer-section {
-  border-left: 1px solid var(--beige); 
+  border-left: 1px solid var(--beige);
 }
 
 .footer-section p,

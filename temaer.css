@@ -76,20 +76,20 @@
   margin-top: 1rem;
 }
 
-  .tema-card {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    background: rgba(255, 255, 255, 0.04);
-    padding: 1.5rem;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  }
+.tema-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
 
-  .tema-card h2 {
-    color: var(--beige);
-    font-size: 2rem;
-  }
+.tema-card h2 {
+  color: var(--beige);
+  font-size: 2rem;
+}
 /* læs mere virker både på section med process men også første section med lærtingsmål 
 fordi den blev proppet ind i en artcile også */
 .more-text {
@@ -156,18 +156,18 @@ article.open .more-text {
 }
 
 .galleri-item {
-    background: var(--beige);
-    padding: 10px;
-    border-radius: 8px;
-    text-align: center;
+  background: var(--beige);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
 }
 
 .galleri-item p {
-    margin-bottom: 15px;
-    margin-top: 10px;
-    font-weight: bold;
-    font-family: sans-serif;
-    color: var(--dusty-green);
+  margin-bottom: 15px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: var(--dusty-green);
 }
 
 .galleri img {
@@ -347,5 +347,4 @@ article.open .more-text {
     width: 100%;
     height: 100%;
   }
-  
 }
