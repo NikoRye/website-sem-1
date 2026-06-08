@@ -173,7 +173,7 @@
                     <img src="img/tema 5 lagoni.webp" alt="lagoni forside">
     
                     <div class="tekst">
-                        <h2>Process</h2>
+                        <h2>Læringsmål</h2>
     
                         <p>
                             Her beskriver jeg processen, mine tanker,
@@ -334,9 +334,20 @@
             <section class="section-galleri">
                 <h2>Kodning</h2>
                 <div class="galleri">
-                    <img src="img/portfolio-kode-menuactive.webp" alt="menu active">
-                    <img src="img/portfolio-kode-sectionbagrund.webp" alt="sections bagrund">
-                    <img src="img/portfolio-kode-svgtekst.webp" alt="svg tekst">
+                    <div class="galleri-item">
+                        <p>Font</p>
+                        <img src="img/fontskode.webp" alt="fontkode">
+                    </div>
+                
+                    <div class="galleri-item">
+                        <p>Grid</p>
+                        <img src="img/gridkode.webp" alt="gridkode">
+                    </div>
+                
+                    <div class="galleri-item">
+                        <p>Reset</p>
+                        <img src="img/resetkode.webp" alt="resetkode">
+                    </div>
                 </div>
                 <div class="next-tema">
                     <a href="tema4.html" class="next-btn">
@@ -349,8 +360,10 @@
             </section>
         </div>
         <div id="popup" class="popup">
-            <span class="luk">&times;</span>
-            <img id="popup-img" alt="">
+            <div class="popup-content">
+                <button class="popup-btn" onclick="closePopup('popup')">✕</button>
+                <img id="popup-img" alt="">
+            </div>
         </div>
     </main>
     <footer class="footer">

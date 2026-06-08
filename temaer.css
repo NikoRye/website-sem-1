@@ -75,7 +75,8 @@
   font-weight: 500;
   margin-top: 1rem;
 }
-
+/* læs mere virker både på section med process men også første section med lærtingsmål 
+fordi den blev proppet ind i en artcile også */
 .more-text {
   display: none;
 }
@@ -137,6 +138,21 @@ article.open .more-text {
 .galleri {
   grid-template-columns: 1fr;
   gap: 1rem;
+}
+
+.galleri-item {
+    background: var(--beige);
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.galleri-item p {
+    margin-bottom: 15px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: var(--dusty-green);
 }
 
 .galleri img {
@@ -279,10 +295,10 @@ article.open .more-text {
 
   .intro-content img {
     width: 100%;
-    height: auto;
+    height: max-content;
     display: block;
     border-radius: 12px;
-    margin: 0;
+    margin: 2rem;
   }
 
   .read-more-btn {
@@ -312,4 +328,5 @@ article.open .more-text {
     width: 100%;
     height: 100%;
   }
+  
 }

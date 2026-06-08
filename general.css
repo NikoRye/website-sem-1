@@ -50,6 +50,25 @@ p {
   color: black;
 }
 
+/* scroll - hvor langt du er nået på siden */
+html::before {
+  content: "";
+  inset: 0;
+  position: fixed;
+  background-color: var(--brown);
+  block-size: 4px;
+  animation: sizeprogress linear both;
+  animation-timeline: scroll();
+  transform-origin: 0 0;
+  z-index: 1000;
+}
+@keyframes sizeprogress {
+  from {
+    scale: 0 1;
+  }
+}
+
+/* knap der viser dig tilbage til forsiden */
 .floating-home {
   position: fixed;
   bottom: 3rem;
