@@ -33,19 +33,24 @@
 .project-card h3 {
   color: var(--dusty-green);
   font-size: 2rem;
+  margin: 0;
 }
 .project-card p {
   color: var(--beige);
   font-size: 1rem;
+  margin-top: 0;
 }
 /* overlay */
 .project-overlay {
   position: absolute;
   inset: 0;
   background: rgba(62, 44, 35, 0.816);
-  display: grid;
-  place-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  gap: 0.5rem;
   opacity: 0;
   transition: 0.3s ease;
 }
@@ -55,7 +60,20 @@
 }
 
 /***************** tema siderne **********************/
+.intro-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
 
+.tema-card h2 {
+  color: var(--beige);
+  font-size: 2rem;
+}
+
+/* process billeder og tekst */
 .proces-grid article {
   display: flex;
   flex-direction: column;
@@ -85,18 +103,7 @@
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
-.intro-content img {
-  width: 500px;
-  height: 350px;
-  object-fit: cover;
-  display: block;
-  border-radius: 12px;
-}
 
-.tema-card h2 {
-  color: var(--beige);
-  font-size: 2rem;
-}
 /* læs mere virker både på section med process men også første section med lærtingsmål 
 fordi den blev proppet ind i en artcile også */
 .more-text {
@@ -150,7 +157,7 @@ article.open .more-text {
 .resultat-btn:hover {
   background: var(--dusty-green);
 }
-
+/* galleri */
 .section-galleri {
   background-color: var(--cream);
   width: 100%;
@@ -315,21 +322,21 @@ article.open .more-text {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    align-items: stretch;
-    margin-top: 4rem;
+    align-items: start;
   }
 
   .intro-content img {
-    width: 100%;
-    height: max-content;
-    display: block;
-    border-radius: 12px;
-    margin: 2rem;
-  }
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  margin: 0;
+}
 
   .read-more-btn {
     margin-top: auto;
   }
+
   /* galleri */
   .galleri {
     display: grid;
