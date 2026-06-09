@@ -1,12 +1,9 @@
 /********************** temaer - portfolio - projekter ********************************/
 
-.projects-section {
-  padding: 2rem;
-}
 
 .projects-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr; /* grid i mobil */
   gap: 10px;
 }
 
@@ -59,6 +56,12 @@
   opacity: 1;
 }
 
+/* gør overlay fast på mobil */
+@media (max-width: 768px) {
+  .project-overlay {
+    opacity: 1;
+  }
+}
 /***************** tema siderne **********************/
 .tema-side {
   margin-top: 6rem;
@@ -107,7 +110,7 @@
   color: var(--beige);
   font-size: 3rem;
 }
-/* læs mere virker både på section med process men også første section med lærtingsmål 
+/* læs mere virker både på section med process men også første section med læringsmål 
 fordi den blev proppet ind i en artcile også */
 .more-text {
   display: none;
