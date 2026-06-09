@@ -146,7 +146,7 @@ main > *:not(svg) {
   font-size: 0.8rem;
   text-decoration: none;
 
-  z-index: 1000;
+  z-index: 10000;
 }
 
 .floating-home:hover {
