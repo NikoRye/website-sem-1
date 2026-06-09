@@ -68,11 +68,68 @@ html::before {
   }
 }
 
+/* SVG BAGGRUNDe */
+.bg-svg {
+  position: absolute;
+  top: 10%; /* Juster denne procent for at rykke bølgen op/ned i din main */
+  left: 0;
+  width: 100%; /* Strækker bølgen ud til kanterne */
+  height: auto; /* Bevarer proportionerne, så teksten ikke bliver strukket grimt */
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: 0; /* Lægger den i baggrunden */
+}
+
+.bg-svg text {
+  font-size: 18px;
+  fill: var(--brown);
+  letter-spacing: 1px;
+}
+
+/* om mig */
+.bg-svg1 {
+  position: fixed;
+  width: 150%; /* ryk vandret */
+  height: 25%; /* størrelse */
+  opacity: 0.5;
+  rotate: 210deg;
+  top: 155px; /* ryk ned */
+  pointer-events: none;
+}
+
+/* projekter */
+.bg-svg2 {
+  position: fixed;
+  width: 150%; /* ryk vandret */
+  height: 25%; /* størrelse */
+  opacity: 0.5;
+  rotate: 90deg;
+  top: 155px; /* ryk ned */
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* tema */
+.bg-svg3 {
+  position: fixed;
+  width: 160%; /* ryk vandret */
+  height: 10%; /* størrelse */
+  opacity: 0.5;
+  rotate: 60deg;
+  top: 210px; /* ryk ned */
+  pointer-events: none;
+}
+
+main > *:not(svg) {
+  position: relative;
+  z-index: 10; /* Lægger alt tekst/indhold øverst */
+}
+
 /* knap der viser dig tilbage til forsiden */
 .floating-home {
   position: fixed;
   bottom: 3rem;
-  right: 3rem;
+  right: 9rem;
 
   width: 65px;
   height: 65px;
@@ -97,21 +154,29 @@ html::before {
   color: var(--beige);
 }
 
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: #b4a38b;
+}
+main {
+  position: relative;
+  background: var(--beige);
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
 /* header */
 .header {
   background-color: var(--dusty-green);
   width: 100%;
-}
-
-/* BODY */
-html,
-body {
-  height: 100%;
-}
-
-body {
-  background-color: var(--beige);
-  min-height: 100vh;
 }
 
 /* logo */
@@ -188,5 +253,43 @@ body {
   .footer-content {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  /* tema */
+  .bg-svg3 {
+    position: fixed;
+    width: 160%; /* ryk vandret */
+    height: 10%; /* størrelse */
+    opacity: 0.5;
+    rotate: 60deg;
+    top: 210px; /* ryk ned */
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  /* knap der viser dig tilbage til forsiden */
+  .floating-home {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: var(--brown);
+    color: var(--beige);
+
+    font-size: 0.8rem;
+    text-decoration: none;
+
+    z-index: 1000;
+  }
+
+  .floating-home:hover {
+    background: var(--dusty-green);
+    color: var(--beige);
   }
 }

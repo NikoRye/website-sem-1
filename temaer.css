@@ -1,13 +1,13 @@
 /********************** temaer - portfolio - projekter ********************************/
 
 .projects-section {
-  padding: 120px 10%;
+  padding: 2rem;
 }
 
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 30px;
+  gap: 10px;
 }
 
 /* KORT */
@@ -60,17 +60,18 @@
 }
 
 /***************** tema siderne **********************/
-.intro-content img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 12px;
+.tema-side {
+  margin-top: 6rem;
 }
-
-.tema-card h2 {
-  color: var(--beige);
-  font-size: 2rem;
+.intro-content {
+  margin: 4rem;
+  margin-bottom: 10rem;
+}
+.intro-content img {
+  max-width: 400px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
 }
 
 /* process billeder og tekst */
@@ -90,8 +91,6 @@
 .section-proces p {
   color: var(--beige);
   text-align: center;
-  font-weight: 500;
-  margin-top: 1rem;
 }
 
 .tema-card {
@@ -104,6 +103,10 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
+.section-proces h2 {
+  color: var(--beige);
+  font-size: 3rem;
+}
 /* læs mere virker både på section med process men også første section med lærtingsmål 
 fordi den blev proppet ind i en artcile også */
 .more-text {
@@ -134,6 +137,7 @@ article.open .more-text {
   margin-top: 6rem;
   text-align: center;
   margin-bottom: 4rem;
+  margin: 4rem;
 }
 
 .resultat img {
@@ -157,6 +161,7 @@ article.open .more-text {
 .resultat-btn:hover {
   background: var(--dusty-green);
 }
+
 /* galleri */
 .section-galleri {
   background-color: var(--cream);
@@ -198,7 +203,7 @@ article.open .more-text {
 }
 
 .section-galleri h2 {
-  font-size: 5rem;
+  font-size: 3rem;
   color: var(--beige);
 }
 /* pop up galleri */
@@ -277,7 +282,25 @@ article.open .more-text {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /* OVERLAY */
+  /* intro billeder og tekst i 2 kolloner */
+  .intro-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .intro-content img {
+    max-width: 600px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+  }
+  .read-more-btn {
+    margin-top: auto;
+  }
+
+  /* projekt grid */
 
   .project-overlay {
     opacity: 0;
@@ -294,10 +317,6 @@ article.open .more-text {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   }
 
-  .tema-card h2 {
-    color: var(--beige);
-  }
-
   .proces-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -311,30 +330,6 @@ article.open .more-text {
     display: block;
     border-radius: 12px;
     margin: 0;
-  }
-
-  .proces-grid p {
-    margin-top: 1rem;
-  }
-
-  /* intro billeder og tekst i 2 kolloner */
-  .intro-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: start;
-  }
-
-  .intro-content img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-  margin: 0;
-}
-
-  .read-more-btn {
-    margin-top: auto;
   }
 
   /* galleri */
@@ -360,5 +355,9 @@ article.open .more-text {
   .popup img {
     width: 100%;
     height: 100%;
+  }
+  .section-galleri h2 {
+    font-size: 5rem;
+    color: var(--beige);
   }
 }
