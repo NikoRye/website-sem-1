@@ -295,6 +295,8 @@ article.open .more-text {
     display: block;
     margin: 0 auto;
     border-radius: 12px;
+    width: auto;
+    height: auto;
   }
   .read-more-btn {
     margin-top: auto;
